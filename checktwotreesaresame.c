@@ -27,6 +27,16 @@ int checksametrees(struct node* tree1,struct node* tree2)
 	}
 	return 0;
 }
+void  deletetree(struct node* root)
+{
+	if(root==NULL)
+	{
+		return;
+	}
+	deletetree(root->left);
+	deletetree(root->right);
+	free(root);
+}
 int main()
 {
 	struct node *root1 = newnode(1);
