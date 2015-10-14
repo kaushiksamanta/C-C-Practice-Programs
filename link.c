@@ -3,8 +3,8 @@
 #include<stdlib.h>
 struct node
 {
-int data;
-struct node *next;
+	int data;
+	struct node *next;
 }*start=NULL;
 struct node * startnode;
 void create()
@@ -13,13 +13,10 @@ char ch;
  do
  {
   struct node *new_node,*current;
-
   new_node=(struct node *)malloc(sizeof(struct node));
-
   printf("\nEnter the data : ");
   scanf("%d",&new_node->data);
   new_node->next=NULL;
-
   if(start==NULL)
   {
   startnode=new_node;
